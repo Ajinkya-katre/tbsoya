@@ -16,7 +16,7 @@
 
 		<!-- Favicons
 		================================================== -->
-		<link rel="shortcut icon" href="img/favicon.ico">
+		<link rel="shortcut icon" href="img/FAVICON_TBSOYA.png">
 		<link rel="apple-touch-icon" href="img/apple-touch-icon.html">
 		<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.html">
 		<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.html">
@@ -51,6 +51,15 @@
 			_html.classList.add( isTouch ? "touch" : "no-touch");
 		</script>
 		<script type="text/javascript" src="js/device.min.js"></script>
+		
+		<style>
+			.whatsapp-container{
+				position: fixed;
+				bottom: 2rem;
+				right:10px; 
+				z-index: 10;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -62,10 +71,10 @@
 				<div class="container-fluid">
 					<div class="row align-items-center justify-content-between no-gutters">
 
-						<a class="top-bar__logo site-logo" href="index.html">
-							<img class="img-fluid" src="img/site_logo.png" alt="demo" />
+					
+						<a class="top-bar__logo site-logo" href="index.html" style="align-items: center; width: 150px; height: auto; margin-bottom: 10px;">
+							<img class="img-fluid" src="img/main_logo.png" alt="demo" />
 						</a>
-
 						<a id="top-bar__navigation-toggler" class="top-bar__navigation-toggler top-bar__navigation-toggler--light" href="javascript:void(0);"><span></span></a>
 
 						<div id="top-bar__inner" class="top-bar__inner">
@@ -83,6 +92,9 @@
 
 										<li>
 											<a href="contacts.html">Contacts</a>
+										</li>
+										<li>
+											<a href="contacts.html">gallery</a>
 										</li>
 
 										<li class="li-btn">
@@ -188,6 +200,17 @@
 								<p>
 									<a class="custom-btn custom-btn--medium custom-btn--style-1" href="#">Get in Touch</a>
 								</p>
+								<div class="row">
+									<div class="col-3">
+									  <img src="img/process-img/1" alt="" style="width:100%">
+									</div>
+									<div class="col-3">
+										<img src="img/process-img/2" alt="" style="width:100%">
+									</div>
+									<div class="col-3">
+										<img src="img/process-img/3" alt="" style="width:100%">
+									</div>
+								  </div>
 							</div>
 						</div>
 					</div>
@@ -512,7 +535,7 @@
 						</div>
 
 						<div class="partners-list">
-							<div class="js-slick"
+							<div class="row p-2 js-slick"
 								 data-slick='{
 								 "autoplay": true,
 								 "arrows": false,
@@ -624,6 +647,7 @@
 
 			<!-- end whatsapp section -->
 
+
 			<!-- start footer -->
 			<footer id="footer" class="footer--style-1">
 				<div class="container">
@@ -631,7 +655,7 @@
 						<div class="col-12 col-sm-auto">
 							<div class="footer__item">
 								<a class="site-logo" href="index.html">
-									<img class="img-fluid  lazy" src="img/blank.gif" data-src="img/site_logo.png" alt="demo" />
+									<img class="img-fluid  lazy" src="img/blank.gif" data-src="img/main_logo.png" alt="demo" />
 								</a>
 							</div>
 						</div>
@@ -691,6 +715,8 @@
 										<li><a href="#">Gallery</a></li>
 										<li><a href="#">Blog</a></li> -->
 										<li><a href="contacts.html">Contacts</a></li>
+										<li><a href="gallery.html">gallery</a></li>
+
 									</ul>
 								</nav>
 							</div>
