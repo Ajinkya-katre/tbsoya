@@ -53,12 +53,54 @@
 		_html.classList.add(isTouch ? "touch" : "no-touch");
 	</script>
 	<script type="text/javascript" src="js/device.min.js"></script>
+
+	
+<script>
+	function enlargeImage(img) {
+	  // Get the source of the clicked image
+	  var src = img.src;
+  
+	  // Set the source of the enlarged image
+	  var enlargedImage = document.getElementById("enlarged");
+	  enlargedImage.innerHTML = '<img src="' + src + '" alt="Enlarged Image">';
+	  
+	  // Display the enlarged image
+	  enlargedImage.style.display = "block";
+	}
+  
+	function hideEnlargedImage() {
+	  // Hide the enlarged image when clicked
+	  document.getElementById("enlarged").style.display = "none";
+	}
+  </script>
 	<style>
-		.whatsapp-container {
+		
+    /* Style for each image */
+    .image-container img {
+      width: 100px;
+      height: 100px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+		/* Style for the larger image */
+		.enlarged-image {
+			display: none;
 			position: fixed;
-			bottom: 2rem;
+			align-content: center;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			max-width: 25%;
+			max-height: 25%;
+		}
+
+		/* Style for the cancel button */
+		.cancel-button {
+			position: fixed;
+			top: 10px;
 			right: 10px;
-			z-index: 10;
+			cursor: pointer;
 		}
 	</style>
 </head>
@@ -94,11 +136,11 @@
 										<a href="about.html">About</a>
 									</li>
 
-									<li class="active">
+									<li>
 										<a href="contacts.html">Contacts</a>
 									</li>
-									<li>
-										<a href="gallery.html">gallery</a>
+									<li class="active">
+										<a href="gallery.html">Gallery</a>
 									</li>
 
 									<li class="li-btn">
@@ -121,7 +163,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-lg-7">
-						<h1 class="__title"><span>Agro</span> Contact Us</h1>
+						<h1 class="__title"><span>Agro</span> Our Manufacturing process </h1>
 
 						<p>
 							The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
@@ -181,210 +223,127 @@
 
 			<!-- start section -->
 			<section class="section">
+
 				<div class="container">
-					<!-- start company contacts -->
-					<div class="company-contacts  text-center">
-						<div class="__inner">
-							<div class="row justify-content-around">
-								<!-- start item -->
-								<div class="col-12 col-md-4 col-lg-3">
-									<div class="__item">
-										<i class="__ico fontello-location"></i>
 
-										<h4 class="__title">adress</h4>
+					<div class="gallery">
+						<!-- Add your image URLs and titles here -->
+						<img src="img/process-img/1.jpg" alt="Image 1" onclick ="enlargeImage(this)">
+						<img src="img/process-img/2.jpg" alt="Image 2" onclick ="enlargeImage(this)">
+						<img src="img/process-img/3.jpg"  alt="Image 3" onclick="enlargeImage(this)">						<img src="img/process-img/4.jpg" alt="Image 1" onclick ="enlargeImage(this)">
+						<img src="img/process-img/4.jpg" alt="Image 4" onclick ="enlargeImage(this)">
+						<img src="img/process-img/5.jpg" alt="Image 5" onclick ="enlargeImage(this)">
+						<img src="img/process-img/6.jpg" alt="Image 6" onclick ="enlargeImage(this)">
+						<img src="img/process-img/7.jpg" alt="Image 7" onclick ="enlargeImage(this)">
+						<img src="img/process-img/8.jpg" alt="Image 8" onclick ="enlargeImage(this)">
+						<img src="img/process-img/9.jpg" alt="Image 9" onclick ="enlargeImage(this)">
+						<img src="img/process-img/10.jpg" alt="Image 10" onclick ="enlargeImage(this)">
 
-										<p>
-											523 Sylvan Ave, 5th Floor Mountain View, CA 94041USA
-										</p>
-									</div>
-								</div>
-								<!-- end item -->
 
-								<!-- start item -->
-								<div class="col-12 col-md-4 col-lg-3">
-									<div class="__item">
-										<i class="__ico fontello-phone"></i>
-
-										<h4 class="__title">phone</h4>
-
-										<p>
-											+1 (234) 56789,<br>+1 987 654 3210
-										</p>
-									</div>
-								</div>
-								<!-- end item -->
-
-								<!-- start item -->
-								<div class="col-12 col-md-4 col-lg-3">
-									<div class="__item">
-										<i class="__ico fontello-mail-1"></i>
-
-										<h4 class="__title">e-mail</h4>
-
-										<p><a href="mailto:support@agrocompany.com">support@agrocompany.com</a></p>
-									</div>
-								</div>
-								<!-- end item -->
-							</div>
-						</div>
+						<!-- <img src="image2.jpg" alt="Image 2" title="Image 2"> -->
+						<!-- Add more images as needed -->
 					</div>
-					<!-- end company contacts -->
 				</div>
+	
+				  <div id="enlarged" class="enlarged-image">
+					<!-- Enlarged image will be displayed here -->
+					<span class="cancel-button" onclick="hideEnlargedImage()">Cancel</span>
+				  </div>
+				  
 			</section>
-			<!-- end section -->
 
-			<!-- start section -->
-			<section class="section section--dark-bg  section--contacts">
+			<div id="enlarged" class="enlarged-image">
+				<!-- Enlarged image will be displayed here -->
+				<span class="cancel-button" onclick="hideEnlargedImage()">Cancel</span>
+			</div>
+			<!-- end section -->
+			<!-- start footer -->
+			<footer id="footer" class="footer--style-1" style="background-color: #24292c;">
 				<div class="container">
-					<div class="row justify-content-end">
-						<div class="col-12 col-md-6">
+					<div class="row">
+						<div class="col-12 col-sm-auto">
+							<div class="footer__item">
+								<a class="site-logo" href="index.html">
+									<img class="img-fluid  lazy" src="img/blank.gif" data-src="img/site_logo.png"
+										alt="demo" />
+								</a>
+							</div>
+						</div>
 
-							<div class="row justify-content-end">
-								<div class="col-md-11">
-									<div class="section-heading section-heading--white">
-										<h2 class="__title">Get <span>in touch</span></h2>
+						<div class="col-12 col-sm">
+							<div class="row align-items-md-center no-gutters">
+								<div class="col-12 col-md">
+									<div class="footer__item">
+										<address>
+											<p>
+												523 Sylvan Ave, 5th Floor Mountain View, CA 94041USA
+											</p>
 
-										<p>Latin words, combined with a handful of model sentence structures, to
-											generate Lorem Ipsum which looks reasonable.</p>
+											<p>
+												+1 (234) 56789, +1 987 654 3210 <br>
+												<a href="mailto:support@agrocompany.com">support@agrocompany.com</a>
+											</p>
+										</address>
 									</div>
-
-									<form class="contact-form js-contact-form" action="#">
-										<div class="input-wrp">
-											<input class="textfield" name="name" type="text" placeholder="Name" />
-										</div>
-
-										<div class="input-wrp">
-											<input class="textfield" name="email" type="text" placeholder="E-mail" />
-										</div>
-
-										<div class="input-wrp">
-											<textarea class="textfield" name="message"
-												placeholder="Comments"></textarea>
-										</div>
-
-										<button class="custom-btn custom-btn--medium custom-btn--style-3 wide"
-											type="submit" role="button">Send</button>
-
-										<div class="form__note"></div>
-									</form>
 								</div>
-							</div>
 
-						</div>
-					</div>
-				</div>
-
-				<div class="row no-gutters">
-					<div class="col-md-6  map-container map-container--left">
-						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2078.455451283005!2d75.9074129002799!3d17.879554863486565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc49855405eac49%3A0x753a475d6de7f0d4!2sJalkewadi%2C%20Maharashtra!5e1!3m2!1sen!2sin!4v1702034932849!5m2!1sen!2sin"
-							width="700" style="height: 700px" allowfullscreen="" loading="lazy"
-							referrerpolicy="no-referrer-when-downgrade"></iframe>
-						<!-- this is demo key "AIzaSyBXQROV5YMCERGIIuwxrmaZbBl_Wm4Dy5U" -->
-						<!-- <div class="g_map" data-api-key="AIzaSyBXQROV5YMCERGIIuwxrmaZbBl_Wm4Dy5U" data-longitude="44.958309" data-latitude="34.109925" data-marker="img/marker.png" style="min-height: 255px"></div> -->
-					</div>
-				</div>
-			</section>
-			<!-- end section -->
-		</main>
-		<!-- end main -->
-
-		<!-- whatsapp section -->
-
-		<div class="whatsapp-container">
-			<a href="https://wa.me/917620849210" target="_blank"><img src="./img/whatsapp.png" alt="" height="50px"
-					width="50px" /></a>
-		</div>
-
-		<!-- end whatsapp section -->
-
-
-		<!-- start footer -->
-		<footer id="footer" class="footer--style-1">
-			<div class="container">
-				<div class="row">
-					<div class="col-12 col-sm-auto">
-						<div class="footer__item">
-							<a class="site-logo" href="index.html">
-								<img class="img-fluid  lazy" src="img/blank.gif" data-src="img/site_logo.png"
-									alt="demo" />
-							</a>
-						</div>
-					</div>
-
-					<div class="col-12 col-sm">
-						<div class="row align-items-md-center no-gutters">
-							<div class="col-12 col-md">
-								<div class="footer__item">
-									<address>
-										<p>
-											523 Sylvan Ave, 5th Floor Mountain View, CA 94041USA
-										</p>
-
-										<p>
-											+1 (234) 56789, +1 987 654 3210 <br>
-											<a href="mailto:support@agrocompany.com">support@agrocompany.com</a>
-										</p>
-									</address>
-								</div>
-							</div>
-
-							<div class="col-12 col-md-auto">
-								<div class="footer__item">
-									<div class="social-btns">
-										<a href="#"><i class="fontello-twitter"></i></a>
-										<a href="#"><i class="fontello-facebook"></i></a>
-										<a href="#"><i class="fontello-linkedin-squared"></i></a>
+								<div class="col-12 col-md-auto">
+									<div class="footer__item">
+										<div class="social-btns">
+											<a href="#"><i class="fontello-twitter"></i></a>
+											<a href="#"><i class="fontello-facebook"></i></a>
+											<a href="#"><i class="fontello-linkedin-squared"></i></a>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="col-12 col-lg-5 col-xl-4 offset-xl-1">
-						<div class="footer__item">
-							<h5 class="h6">Get a newslatter</h5>
+						<div class="col-12 col-lg-5 col-xl-4 offset-xl-1">
+							<div class="footer__item">
+								<h5 class="h6">Get a newslatter</h5>
 
-							<form class="form--horizontal" action="#">
-								<div class="input-wrp">
-									<input class="textfield" name="s" type="text" placeholder="Your E-mail" />
-								</div>
+								<form class="form--horizontal" action="#">
+									<div class="input-wrp">
+										<input class="textfield" name="s" type="text" placeholder="Your E-mail" />
+									</div>
 
-								<button class="custom-btn custom-btn--medium custom-btn--style-1" type="submit"
-									role="button">subscribe</button>
-							</form>
+									<button class="custom-btn custom-btn--medium custom-btn--style-1" type="submit"
+										role="button">subscribe</button>
+								</form>
+							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="row flex-lg-row-reverse">
-					<div class="col-12 col-lg-6">
-						<div class="footer__item">
-							<nav id="footer__navigation" class="navigation  text-lg-right">
-								<ul>
-									<li><a href="index.html">Home</a></li>
-									<li><a href="about.html">About</a></li>
-									<!-- <li><a href="#">Pages</a></li>
+					<div class="row flex-lg-row-reverse">
+						<div class="col-12 col-lg-6">
+							<div class="footer__item">
+								<nav id="footer__navigation" class="navigation  text-lg-right">
+									<ul>
+										<li><a href="index.html">Home</a></li>
+										<li><a href="about.html">About</a></li>
+
+										<!-- <li><a href="#">Pages</a></li>
 										<li><a href="#">Gallery</a></li>
 										<li><a href="#">Blog</a></li> -->
-									<li class="active"><a href="contacts.html">Contacts</a></li>
-									<li><a href="gallery.html">gallery</a></li>
+										<li><a href="contacts.html">Contacts</a></li>
+										<li class="active"><a href="gallery.html">gallery</a></li>
 
-								</ul>
-							</nav>
+									</ul>
+								</nav>
+							</div>
 						</div>
-					</div>
 
-					<div class="col-12 col-lg-6">
-						<div class="footer__item">
-							<span class="__copy">© 2023 TBSOYA. All rights reserved. Created by Ajinkya Katre
-								&hearts;</a></span>
+						<div class="col-12 col-lg-6">
+							<div class="footer__item">
+								<span class="__copy">© 2023 TBSOYA. All rights reserved. Created by Ajinkya Katre
+									&hearts;</a></span>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</footer>
-		<!-- end footer -->
+			</footer>
+			<!-- end footer -->
 	</div>
 
 	<div id="btn-to-top-wrap">
