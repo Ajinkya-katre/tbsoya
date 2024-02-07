@@ -54,34 +54,33 @@
 	</script>
 	<script type="text/javascript" src="js/device.min.js"></script>
 
-	
-<script>
-	function enlargeImage(img) {
-	  // Get the source of the clicked image
-	  var src = img.src;
-  
-	  // Set the source of the enlarged image
-	  var enlargedImage = document.getElementById("enlarged");
-	  enlargedImage.innerHTML = '<img src="' + src + '" alt="Enlarged Image">';
-	  
-	  // Display the enlarged image
-	  enlargedImage.style.display = "block";
-	}
-  
-	function hideEnlargedImage() {
-	  // Hide the enlarged image when clicked
-	  document.getElementById("enlarged").style.display = "none";
-	}
-  </script>
+
+	<script>
+		function enlargeImage(img) {
+			// Get the source of the clicked image
+			var src = img.src;
+
+			// Set the source of the enlarged image
+			var enlargedImage = document.getElementById("enlarged");
+			enlargedImage.innerHTML = '<img src="' + src + '" alt="Enlarged Image">';
+
+			// Display the enlarged image
+			enlargedImage.style.display = "block";
+		}
+
+		function hideEnlargedImage() {
+			// Hide the enlarged image when clicked
+			document.getElementById("enlarged").style.display = "none";
+		}
+	</script>
 	<style>
-		
-    /* Style for each image */
-    .image-container img {
-      width: 100px;
-      height: 100px;
-      margin: 5px;
-      cursor: pointer;
-    }
+		/* Style for each image */
+		.image-container img {
+			width: 100px;
+			height: 100px;
+			margin: 5px;
+			cursor: pointer;
+		}
 
 		/* Style for the larger image */
 		.enlarged-image {
@@ -228,28 +227,29 @@
 
 					<div class="gallery">
 						<!-- Add your image URLs and titles here -->
-						<img src="img/process-img/1.jpg" alt="Image 1" onclick ="enlargeImage(this)">
-						<img src="img/process-img/2.jpg" alt="Image 2" onclick ="enlargeImage(this)">
-						<img src="img/process-img/3.jpg"  alt="Image 3" onclick="enlargeImage(this)">						<img src="img/process-img/4.jpg" alt="Image 1" onclick ="enlargeImage(this)">
-						<img src="img/process-img/4.jpg" alt="Image 4" onclick ="enlargeImage(this)">
-						<img src="img/process-img/5.jpg" alt="Image 5" onclick ="enlargeImage(this)">
-						<img src="img/process-img/6.jpg" alt="Image 6" onclick ="enlargeImage(this)">
-						<img src="img/process-img/7.jpg" alt="Image 7" onclick ="enlargeImage(this)">
-						<img src="img/process-img/8.jpg" alt="Image 8" onclick ="enlargeImage(this)">
-						<img src="img/process-img/9.jpg" alt="Image 9" onclick ="enlargeImage(this)">
-						<img src="img/process-img/10.jpg" alt="Image 10" onclick ="enlargeImage(this)">
+						<img src="img/process-img/1.jpg" alt="Image 1" onclick="enlargeImage(this)">
+						<img src="img/process-img/2.jpg" alt="Image 2" onclick="enlargeImage(this)">
+						<img src="img/process-img/3.jpg" alt="Image 3" onclick="enlargeImage(this)"> <img
+							src="img/process-img/4.jpg" alt="Image 1" onclick="enlargeImage(this)">
+						<img src="img/process-img/4.jpg" alt="Image 4" onclick="enlargeImage(this)">
+						<img src="img/process-img/5.jpg" alt="Image 5" onclick="enlargeImage(this)">
+						<img src="img/process-img/6.jpg" alt="Image 6" onclick="enlargeImage(this)">
+						<img src="img/process-img/7.jpg" alt="Image 7" onclick="enlargeImage(this)">
+						<img src="img/process-img/8.jpg" alt="Image 8" onclick="enlargeImage(this)">
+						<img src="img/process-img/9.jpg" alt="Image 9" onclick="enlargeImage(this)">
+						<img src="img/process-img/10.jpg" alt="Image 10" onclick="enlargeImage(this)">
 
 
 						<!-- <img src="image2.jpg" alt="Image 2" title="Image 2"> -->
 						<!-- Add more images as needed -->
 					</div>
 				</div>
-	
-				  <div id="enlarged" class="enlarged-image">
+
+				<div id="enlarged" class="enlarged-image">
 					<!-- Enlarged image will be displayed here -->
 					<span class="cancel-button" onclick="hideEnlargedImage()">Cancel</span>
-				  </div>
-				  
+				</div>
+
 			</section>
 
 			<div id="enlarged" class="enlarged-image">
@@ -257,6 +257,15 @@
 				<span class="cancel-button" onclick="hideEnlargedImage()">Cancel</span>
 			</div>
 			<!-- end section -->
+			<!-- whatsapp section -->
+
+			<div class="whatsapp-container">
+				<a href="https://wa.me/917620849210" target="_blank"><img src="./img/whatsapp.png" alt="" height="50px"
+						width="50px" /></a>
+			</div>
+
+			<!-- end whatsapp section -->
+
 			<!-- start footer -->
 			<footer id="footer" class="footer--style-1" style="background-color: #24292c;">
 				<div class="container">
