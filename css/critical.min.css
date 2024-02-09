@@ -211,7 +211,39 @@ template {
 .gallery img:hover {
     transform: scale(1.1);
 }
+	/* Style for each image */
+    .image-container img {
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        cursor: pointer;
+    }
 
+    /* Style for the larger image */
+    .enlarged-image {
+        display: none;
+        position: fixed;
+        align-content: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 25%;
+        max-height: 25%;
+    }
+
+    /* Style for the cancel button */
+    .cancel-button {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+        .whatsapp-container {
+            position: fixed;
+            bottom: 2rem;
+            right: 10px;
+            z-index: 10;
+        }
 
 
 .fontello-search:before {
